@@ -30,7 +30,7 @@ class KeyboardController: NSObject,
     // Exercise 1: Return the correct number of items in a section
     // Tip: There's a helper method you can use located in this class
     // START YOUR CODE HERE
-    return 0
+      return keyboardRows[section].count
     // END YOUR CODE HERE
   }
 
@@ -42,6 +42,7 @@ class KeyboardController: NSObject,
     // Exercise 4: Pass in the `didSelectString` closure to the KeyboardCell's corresponding property
     // START YOUR CODE HERE
     // ...
+      cell.didSelectString = didSelectString
     // END YOUR CODE HERE
     return cell
   }

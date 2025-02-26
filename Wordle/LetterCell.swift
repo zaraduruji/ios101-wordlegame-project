@@ -51,6 +51,17 @@ class LetterCell: UICollectionViewCell {
   func set(style: LetterCellStyle) {
     // START YOUR CODE HERE
     // ...
+      switch style {
+          case .initial:
+              backgroundColor = .black
+              layer.borderColor = UIColor.gray.cgColor
+          case .incorrect:
+              backgroundColor = UIColor(red: 0.23, green: 0.24, blue: 1.0, alpha: 1.0) // Blue for incorrect
+          case .correctLetterOnly:
+              backgroundColor = UIColor(red: 0.69, green: 0.63, blue: 0.24, alpha: 1.0) // Yellow for correct letter but wrong place
+          case .correctLetterAndPosition:
+              backgroundColor = UIColor(red: 0.35, green: 0.69, blue: 0.24, alpha: 1.0) // Green for correct letter and correct position
+          }
     // END YOUR CODE HERE
   }
 }
